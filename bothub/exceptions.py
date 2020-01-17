@@ -1,0 +1,2 @@
+class BothubError(Exception):
+    pass
