@@ -24,8 +24,8 @@ jobs:
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
+        pipenv run python setup.py install
         pipenv run flake8 .
     - name: Test with pytest
       run: |
-        pipenv run python setup.py install
         pipenv run python tests/tests.py
