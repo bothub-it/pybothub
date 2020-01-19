@@ -23,7 +23,7 @@ jobs:
         pipenv install
     - name: Lint with black
       run: |
-        black .
+        pipenv run black --target-version=py36 . --check
     - name: Test with unittest
       run: |
         pipenv run python tests/tests.py
