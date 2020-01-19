@@ -27,4 +27,4 @@ jobs:
         pipenv run flake8 .
     - name: Test with pytest
       run: |
-        pipenv run python test/tests.py
+        pipenv run python tests/tests.py

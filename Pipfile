@@ -6,6 +6,8 @@ verify_ssl = true
 [dev-packages]
 "flake8" = "*"
 black = "==19.10b0"
+requests-mock = "*"
+python-decouple = "*"
 
 [packages]
 requests = "==2.22.0"
