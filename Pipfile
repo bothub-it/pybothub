@@ -11,6 +11,7 @@ python-decouple = "*"
 
 [packages]
 requests = "==2.22.0"
+black = "*"
 
 [requires]
 python_version = "3.6"
