@@ -9,7 +9,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.5, 3.6, 3.7]
+        python-version: [3.4, 3.5, 3.6, 3.7]
 
     steps:
     - uses: actions/checkout@v1
@@ -27,4 +27,5 @@ jobs:
         pipenv run flake8 .
     - name: Test with pytest
       run: |
+        pipenv run python setup.py install
         pipenv run python tests/tests.py
