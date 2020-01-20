@@ -20,7 +20,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install pipenv
-        pipenv install
+        pipenv install --dev
     - name: Lint with black
       run: |
         pipenv run black --target-version=py36 . --check
