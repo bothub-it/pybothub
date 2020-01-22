@@ -4,17 +4,16 @@ from .exceptions import BothubError
 
 
 class Bothub(object):
-    _URL = 'https://nlp.bothub.it/'
+    _URL = "https://nlp.bothub.it/"
     authorization = None
 
     def __init__(self, authorization):
         self.authorization = authorization
 
     def _get_url(self, path):
-        return f'{self._URL}{path}'
+        return f"{self._URL}{path}"
 
-    @staticmethod
-    def _request(authorization, method, path, data, **kwargs):
+    def _request(self, authorization, method, path, data, **kwargs):
         request = requests.request(
             method=method,
             url=self._get_url(path),
